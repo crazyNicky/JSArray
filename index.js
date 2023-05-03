@@ -9,10 +9,13 @@ function addToArray() {
   inputField.value = "";
   displayArray();
 }
-
+function removeFromArray(i){
+    myArray.splice(i,1);
+    displayArray();
+}
 function displayArray() {
   const output = document.getElementById("output");
   output.innerHTML = "";
-  myArray.forEach(item =>{
-    output.innerHTML += "<li>"+item+"</li>"});
+  myArray.forEach(item => {
+    output.innerHTML += "<li>"+item+"</li><button onClick =\"removeFromArray("+myArray.indexOf(item)+")\">POP ME</button>"});
 }
