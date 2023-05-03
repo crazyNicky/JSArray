@@ -1,0 +1,25 @@
+body {
+    background-color: bisque;
+    margin: 7%;
+    justify-content:center;
+}
+.container {
+    display: flex;
+    justify-content: right;
+}
+input {
+    width:75%;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    display: flex;
+    background-color:aliceblue ;
+    justify-content:space-between;
+}
+button {
+    margin-left: 10px;
+}

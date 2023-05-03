@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="./index.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <title>Array</title>
 </head>
 <body>
-    <input id="input" type="text" value="">
-    <button onclick="addToArray()">PUSH ME</button>
+    <div class="container">
+        <input id="input" type="text" placeholder="Type Me or Win Me" value="">
+        <button onclick="addToArray()">PUSH Me</button>
+        <div id="buy"></div>
+    </div>
     <ul>
-        <div id="output" style="list-style-type: none;"></div>
+        <div id="output"></div>
     </ul>
     <script src="index.js"></script>
 </body>
