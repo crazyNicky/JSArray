@@ -3,6 +3,12 @@ body {
     margin: 7%;
     justify-content:center;
 }
+h1 {
+    color: rebeccapurple;
+}
+h1 a{
+    text-decoration: none;
+}
 .container {
     display: flex;
     justify-content: right;

@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="./index.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>Do you know what's to do?</title>
+    <link rel="stylesheet" href="./arrays.css">
 </head>
 <body>
+    <h1>Would you like to<a href="./arrays.html">...</a></h1>
     <div class="container">
-        <input id="input" type="text" placeholder="Type Me or Win Me" value="">
-        <button onclick="addToArray()">PUSH Me</button>
-        <div id="buy"></div>
+        <select name="choice" id="choice" required onchange="console.log(event.currentTarget)">
+            
+        </select>
+        <button onclick="addToArray(1)">PUSH Me</button>
     </div>
     <ul>
-        <div id="output"></div>
+        <div id="output">
+        </div>
     </ul>
-    <script src="index.js"></script>
+    <div id="set">
+
+    </div>
+    <script src="./arrays.css"></script>
 </body>
 </html>
