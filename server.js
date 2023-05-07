@@ -1,32 +1,33 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require('body-parser');
+const express = require('express');
 const fs = require('fs');
+const path = './src/';
+const cors = require('cors');
 const app = express();
 const port = 3000;
-
 const corsOptions = {
   origin: "http://localhost:5500",
+  methods: ["GET","PUT"]
 };
-
 app.use(cors(corsOptions));
-app.use(bodyParser.json);
-app.post("/", (request, response) => {
-  app.saveToFile('./my.json', request.body);
-  response.send("Done")
-});
-
+app.use(express.raw({ type: 'application/json' })); 
 function saveToFile(file,data){
-  // Datei öffnen zum Schreiben/Hinzufügen
-  const fileDescriptor = fs.openSync(file, 'a');
+  const fileDescriptor = fs.openSync(file, 'w');
   fs.writeSync(fileDescriptor,  data);
-  // Übertragung der Änderungen in die Datei
   fs.fsyncSync(fileDescriptor);
-  // Datei schließen
-  fs.closeSync(fileDescriptor)
+  fs.closeSync(fileDescriptor);
 }
-function readFromFile(file){
-  response = fs.readFileSync(file);
-}
-app.listen(port, () => console.info("Server läuft!"));
-app.saveToFile("./my.json");
+app.get('/src', (request,response)=>{
+  const jsonData = fs.readFileSync(path+request.headers['x-filename'],'utf8');
+  response.send(jsonData);
+});
+app.put('/src', (request, response) => {
+  try {
+    saveToFile(path+request.headers['x-filename'], request.body.toString());
+    response.sendStatus(200)
+  } catch (error) {
+    console.log(error);
+    response.sendStatus(error);
+  }
+});
+app.listen(port, () => console.log(`Server läuft auf ${port}`));
+

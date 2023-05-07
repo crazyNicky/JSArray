@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Referrer-Policy" content="origin-when-cross-origin">
     <title>Do you know what's to do?</title>
     <link rel="stylesheet" href="./arrays.css">
 </head>
 <body>
     <h1>Would you like to<a href="./arrays.html">...</a></h1>
     <div class="container">
-        <select name="choice" id="choice" required onchange="console.log(event.currentTarget)">
+        <select name="choice" id="choice" required>
             
         </select>
-        <button onclick="addToArray(1)">PUSH Me</button>
+        <button onclick="addToArray(userArray,true)">PUSH Me</button>
     </div>
     <ul>
         <div id="output">
@@ -22,6 +23,6 @@
     <div id="set">
 
     </div>
-    <script src="./arrays.css"></script>
+    <script src="./arrays.js"></script>
 </body>
 </html>
