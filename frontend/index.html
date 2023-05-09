@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Referrer-Policy" content="origin-when-cross-origin">
+    <title>Web-Projekt von Nikolay Shtanin</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/arrays.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Front-End Web-Projekt</h1>
+        <div class="navbar" include="./navbar.html"></div>
+    </header>
+    <hr>
+    <div id="body">
+        <h2>Would you like to<a href="./arrays.html">...</a></h2>
+        <div class="container">
+            <select name="choice" id="choice" required>
+                <!--hier sollten eigentlich die Optionen sein-->
+            </select>
+            <button onclick="addToArray(userArray,true)">PUSH Me</button>
+            <div id="checkout"></div>
+        </div>
+        <ul>
+            <div id="output">
+            </div>
+        </ul>
+    </div>
+    <hr>
+    <div class="footer" include="./footer.html"></div>
+    <script src="../src/js/inject.js"></script>
+    <script src="../src/js/arrays.js"></script>
+</body>
+</html>

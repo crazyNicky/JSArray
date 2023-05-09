@@ -1,0 +1,57 @@
+  footer {
+    height: 60px;
+    margin-bottom: 0;
+    margin-top: auto;
+    display: flex;
+    align-items:start;
+    align-self: last baseline;
+    justify-content:left;
+  }
+ ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+  }
+ #social li {
+    flex: 1;
+    display: inline-block;
+    margin-left: 10%;
+  }
+  li:last-child {
+    margin-right: 0;
+  }
+ i{
+    width: 40px;
+    height: 40px;
+    display:flex;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position:center;
+  }
+  i:hover{
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+  }
+#bier{
+    background-image: url('../img/bier.png');
+    background-size: 100%;
+}
+#bvb {
+  background-image: url('../img/bvb.webp');;
+  background-size: 160%;
+}
+#twitter {
+    background-image: url('../img/twitter.png');
+    background-size: 160%;
+  }
+#baa {
+    background-image: url('../img/baa.png');
+    background-size: 200%;
+    background-position:calc(100%) calc(50%-15px);
+  }
+  #vk {
+    background-image: url('../img/vk.png');
+  }
+  

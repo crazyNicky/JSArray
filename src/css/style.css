@@ -1,0 +1,61 @@
+* {
+    background-color:#2b2727;
+    color:#ceda64;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 3%;
+    align-content: center;
+    margin-bottom: none;
+}
+button{
+  background-color: #ccc;
+}
+.header {
+  display:flex;
+  align-items:top;
+  justify-content:right;
+}
+.header h1 {
+  margin-right: auto;
+  justify-content: left;
+}
+#contact{
+  display: flex;
+  justify-content: center;
+}
+
+table tr td {
+    vertical-align: top;
+}
+
+.projects {
+  display: flex;
+  height: auto;
+}
+.arduino {
+  flex: 1;
+  padding: 1%;
+  margin: 1%;
+  background-color: lightcoral;
+  background-image:"../src/img/tresor.png";
+  background-size: auto;
+}
+.frontend {
+  flex: 1;
+  padding: 1%;
+  margin: 1%;
+  background-color: bisque;
+}
+.git {
+  flex: 1;
+  padding: 1%;
+  margin: 1%;
+  background-color: lightyellow;
+}
+h6 {
+  flex: 1;
+  margin: 1%;
+}
+
+
