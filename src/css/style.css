@@ -79,14 +79,35 @@ a:hover{
   background-repeat: no-repeat;
   background-size: 100vw 70vh;
   background-position: -30px 0;
+  padding-bottom: 31%;
 }
+#arrays{
+  padding-bottom: 25%;
+}
+#projects {
+ display: flex;
+ padding-bottom: 14%;
+}
+
 #about{
   display: flex;
+  padding-left: 25%;
+  padding-right: 5%;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 #contact{
   background-image: url('../img/batterfly.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100vw 40vw;
+  padding-bottom: 0%;
+}
+fieldset{
+  width:fit-content;
+  padding-left: 2%;
+  margin-top: -100px;
+  margin-left: auto;
+  margin-right:15%;
 }
 ul {
   background: none;
@@ -110,34 +131,24 @@ table tr td {
   color: var(--color-global);
 }
 #foto {
-  width: 50%;
+  width: 40%;
   opacity: 70%;
 }
-
 .project{
   background-position-y: bottom;
   align-content:space-between;
 }
 #arduino {
-  flex: 1;
-  padding: 1%;
-  margin: 1%;
   background-image: url('../src/img/tresor.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 #frontend {
-  flex: 1;
-  padding: 1%;
-  margin: 1%;
   background-image: url('../img/efh.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 #git {
-  flex: 1;
-  padding: 1%;
-  margin: 1%;
   background-image: url('../img/monkey.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -150,7 +161,6 @@ form {
   justify-content: space-between;
 }
 input {
-  flex: 1;
   background-color: var(--background-color-input);
   color:var(--color-input);
   text-decoration: double;
@@ -199,8 +209,9 @@ button {
   background-color: var(--background-color-global);
 }
 #pp{
-  display:contents ;
-  width:100%;
+  width:70vw;
+  height: 30vh;
+  margin-left: 10%;
   display: inline-flex;
   opacity: 50%;
 }
