@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Referrer-Policy" content="origin-when-cross-origin">
     <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/arrays.css">
     <title>Back-End</title>
 </head>
 <body>
@@ -15,23 +14,23 @@
     </header>
     <hr>
     <h2>You know what's up<a href="./index.html">...</a></h2>
-    
-    <div class="container">
-        <input id="input" type="text" placeholder="Type Me or Win Me" value="">
-        <button onclick="addToArray(myArray,false)">PUSH Me</button>
-        <div id="checkout">
-            <input type="checkbox" id="switch">
-            <label id="trigger" for="switch"></label>
+    <div class="body" id="arrays">
+        <div class="container">
+            <input id="input" type="text" placeholder="Type Me or Win Me" value="">
+            <button onclick="addToArray(myArray,false)">PUSH Me</button>
+            <div id="checkout">
+                
+            </div>
         </div>
-    </div>
-    <ul>
-        <div id="output">
+        <ul>
+        <div class="output" id="inputed">
             <img src="../src/img/pp.png" href="https://www.paypal.com/de/signin" alt="Hier könnte Ihre Werbung stehen">
-            <b><i><h3>Hier könnte IHRE Werbung stehen...</h3></i></b>
+            <h3>Hier könnte IHRE Werbung stehen...</h3>
         </div>
-    </ul>
-    <hr>
+        </ul>
+    </div>
     <div class="footer" include="./footer.html"></div>
+    <script src="../src/js/inject.js"></script>
     <script src="../src/js/arrays.js"></script>
 </body>
 </html>

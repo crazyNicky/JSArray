@@ -1,57 +1,74 @@
-  footer {
-    height: 60px;
-    margin-bottom: 0;
+  @import url('./global.css');
+  .footer {
+    background-color:var(--background-color-global);
+    display: block;
+    height: auto;
+    width:100%;
+    align-items:center;
     margin-top: auto;
+    margin-bottom: 0px;
+  }
+ .footer ul {
+  background-color:var(--background-color-global);
     display: flex;
-    align-items:start;
-    align-self: last baseline;
-    justify-content:left;
+    margin-right: 2%;
+    justify-content: space-around;  
   }
- ul {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
+ .footer li {
+    background-color:var(--background-color-global);
+    text-align: center;
+    align-self: center;
+    margin: 15px;
   }
- #social li {
-    flex: 1;
-    display: inline-block;
-    margin-left: 10%;
+  .footer span{
+    background-color:var(--background-color-global);
+    color: var(--color-global);
   }
-  li:last-child {
-    margin-right: 0;
+  .footer p {
+    color: var(--color-global);
+    background-color:var(--background-color-global);
   }
- i{
+ .footer i{
     width: 40px;
     height: 40px;
     display:flex;
     border-radius: 20px;
-    background-repeat: no-repeat;
-    background-size:auto;
     background-position:center;
   }
-  i:hover{
+ .footer i:hover{
     width: 48px;
     height: 48px;
     border-radius: 24px;
   }
+  #ai{
+    background-image: url('../img/gpt.webp');
+    background-size: 100%;
+  }
+  #dl{
+    background-image: url(../img/dl.jpg);
+    background-size: 140%;
+  }
+  #baa {
+    background-image: url('../img/baa.png');
+    background-size: 160%;
+  }
 #bier{
     background-image: url('../img/bier.png');
-    background-size: 100%;
+    background-size: 120%;
+}
+#tg {
+  background-image: url('../img/tg.webp');
+  background-size: 100%;
+}
+#vk {
+  background-image: url('../img/vk.png');
+  background-size: 100%;
+}
+#twitter {
+  background-image: url('../img/twitter.png');
+  background-size: 160%;
 }
 #bvb {
   background-image: url('../img/bvb.webp');;
-  background-size: 160%;
+  background-size: 180%;
 }
-#twitter {
-    background-image: url('../img/twitter.png');
-    background-size: 160%;
-  }
-#baa {
-    background-image: url('../img/baa.png');
-    background-size: 200%;
-    background-position:calc(100%) calc(50%-15px);
-  }
-  #vk {
-    background-image: url('../img/vk.png');
-  }
-  

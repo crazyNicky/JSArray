@@ -50,5 +50,4 @@ function injectAll() {
                 injectHTML(elem.getAttribute("include"),elem);
     })
 }
-
 injectAll();

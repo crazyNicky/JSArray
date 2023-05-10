@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src/css/contact.css">
 </head>
 <body>
     <header class="header">
@@ -13,47 +12,56 @@
         <div class="navbar" include="./navbar.html"></div>
     </header>
     <hr>
-    <div id="contact">
-        <form action="onsubmit" method="post" target="">
-            <div id="Anrede">
-                <input type="radio" name="anrede" id="ohne" value="" checked>
-                <label for="ohne">ohne Anrede</label>
-                <input type="radio" name="anrede" id="herr" value="Herr">
-                <label for="herr">Herr</label>
-                <input type="radio" name="anrede" id="frau" value="Frau">
-                <label for="frau">Frau</label>
-            </div>
-            <div id="compleetName">
-                <label for="firstname">Vorname:</label>
-                <input id=firstname type="text" name="firstname" placeholder="Vorname" required>
-                <label for="secondname">Nachname:</label>
-                <input id=secondname type="text" name="secondname" placeholder="Nachname" required>
-            </div>
-            <div id="Email">
-                <label for="email">Email:</label>
-                <input id=email type="email" name="email" required>
-                <label for="spam">Spam bekommen?</label>
-                <input type="checkbox" name="spam" id="spam" checked>
-            </div>
-            <div id="Nachricht">
-                <label for="betreff">Betreff:</label>
-                <select name="betreff" id="betreff" required>
-                    <option disabled selected value = "">Wählen...</option>
-                    <option value="problem">Problem</option>
-                    <option value="beschwerde">Beschwerde</option>
-                    <option value="lob">Lob üben</option>
-                    <option value="sonstiges">Sonstiges</option>
-                </select>
-                <label for="nachricht">Nachricht:</label><br>
-                <textarea id=nachricht name="nachricht" placeholder="Ihre Nachricht hier eingeben..."></textarea>
-                <input id="submit" type="submit" value="Absenden">
-                <input id="reset" type="reset" value="Zurücksetzen">
-            </div>
+    <div class="body" id="contact">
+        <form id="myForm">
+            <fieldset>
+                <legend id="legend">Ich freuhe mich auf deine KONSTRUKTIVE Meinung</legend>
+                <br>
+                <p id="anrede">
+                    <input type="radio" name="anrede" id="ohne" value="" checked>
+                    <label for="ohne">ohne Anrede</label>
+                    <input type="radio" name="anrede" id="herr" value="Herr">
+                    <label for="herr">Herr</label>
+                    <input type="radio" name="anrede" id="frau" value="Frau">
+                    <label for="frau">Frau</label>
+                    <br>
+                    <label for="firstname">Vorname</label>
+                    <br>
+                    <input type="text" id="firstname" name="firstname" placeholder="Vorname" required />
+                    <br>
+                    <label for="lastname">Nachname</label>
+                    <br>
+                    <input type="text" id="lastname" name="lastname" placeholder="Nachname" required />
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" name="email" required />
+                    <br>
+                    <input type="checkbox" id="spam" name="spam" checked />
+                    <label for="spam">Spam bekommen</label>
+                </p>
+                <p>
+                    <label for="betreff">Betreff:</label>
+                    <select name="betreff" id="betreff" required>
+                        <option disabled selected value = "">Wählen...</option>
+                        <option value="problem">Problem</option>
+                        <option value="beschwerde">Beschwerde</option>
+                        <option value="lob">Lob üben</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
+                </p>
+                    <label for="nachricht">Nachricht:</label><br>
+                    <textarea id=nachricht name="nachricht" placeholder="Ihre Nachricht hier eingeben..."></textarea>
+                <p>
+                    <button id="btnSubmit">Absenden</button>
+                    <input id="reset" type="reset" value="Zurücksetzen">
+                </p>
+            </fieldset>
         </form>
     </div>
-    <hr>
     <div class="footer" include="./footer.html"></div>
-<script src="../src/js/inject.js"></script>
-<script src="../src/js/contact.js"></script>
+    <script src="../src/js/inject.js"></script>
+    <script src="../src/js/contact.js"></script>
 </body>
 </html>

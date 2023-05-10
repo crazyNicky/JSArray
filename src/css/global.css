@@ -1,0 +1,11 @@
+:root{
+  --color-global:rgb(206, 218, 100);
+  --background-color-global:rgb(43, 39, 39);
+  --color-input:rgb(0, 0, 0);
+  --background-color-input:rgb(127, 255, 212);
+  --color-hover:rgb(0, 0, 255);
+  --background-color-hover:rgb(221, 221, 221);
+  --background-color-switch:rgb(97,97,97);
+    --color-button:rgb(0, 0, 0);
+    --background-color-button:rgb(204, 204, 204);
+}

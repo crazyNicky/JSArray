@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000';
+const url = 'http://localhost:3003';
 let myArray = [];
 let serviceArray =[];
 let userArray = [];
@@ -49,7 +49,7 @@ function removeFromArray(temp,i,flag){
     displayArray(temp,flag)
 }
 function displayArray(temp,flag) {
-  const output = document.getElementById("output");
+  const output = document.getElementById(flag?"selected":"inputed");
   const checkout = document.getElementById("checkout");
   output.innerHTML = "";
   temp.sort((a,b)=>b.localeCompare(a));
@@ -58,14 +58,9 @@ function displayArray(temp,flag) {
         "<button onClick =\"removeFromArray("+(flag?"userArray":"myArray")+","+
         temp.indexOf(item)+","+flag+")\">POP Me</button></li>"
     }); 
-  if(temp.length){
-    checkout.innerHTML = "<button onClick=\"checkOut("+(flag?"userArray":"myArray")+","+flag+")\">Win Me</button>" 
-  }else{
-    checkout.innerHTML = "<input type=\"checkbox\" id=\"switch\"><label id=\"trigger\" for=\"switch\"></label>";
-    output.innerHTML = 
-      "<img src=\"../src/img/pp.png\" href=\"https://www.paypal.com/de/signin\" alt=\"Hier könnte Ihre Werbung stehen\"><b><i><h3>Hier könnte IHRE Werbung stehen...</h3></i></b>";
-  }
-    
+    checkout.innerHTML = (temp.length)?"<button onClick=\"checkOut("+(flag?"userArray":"myArray")+","+flag+")\">Win Me</button>" :"";
+    if(!temp.length)output.innerHTML =
+      "<img id=\"pp\" src=\"../src/img/pp.png\" href=\"https://www.paypal.com/de/signin\" alt=\"Hier könnte Ihre Werbung stehen\"><b><i><h3>Hier könnte IHRE Werbung stehen...</h3></i></b>";
 }
 function checkOut(temp,flag){
   const fileName = flag? "user.json":"my.json";

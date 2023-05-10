@@ -1,61 +1,208 @@
+@import url('./global.css');
 * {
-    background-color:#2b2727;
-    color:#ceda64;
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  /* background-size: 100% 100%; */
 }
 body {
-    margin: 3%;
-    align-content: center;
-    margin-bottom: none;
+  background-color:var(--background-color-global);
+  /* padding: 1%; */
+  align-content: center;
+  margin: 1%;
+  margin-bottom: none;
+  overflow-x:hidden;
+  
 }
-button{
-  background-color: #ccc;
-}
-.header {
+header {
+  background-color:var(--background-color-global);
   display:flex;
-  align-items:top;
+  align-items:center;
   justify-content:right;
 }
-.header h1 {
+h1 {
+  background: none;
+  color: var(--color-global);
   margin-right: auto;
   justify-content: left;
 }
-#contact{
-  display: flex;
-  justify-content: center;
+h2 {
+  background: none;
+  color: var(--color-global);
+  margin: auto;
 }
-
-table tr td {
-    vertical-align: top;
+h2 a{
+  background: none;
+  color: var(--color-global);
+  text-decoration: none;
 }
-
-.projects {
-  display: flex;
-  height: auto;
+h3 {
+  background: none;
+  font-style: double italic;
+  color: var(--color-global);
+  text-align: center;
 }
-.arduino {
+h4 {
+  background: none;
+  color: var(--color-global);
   flex: 1;
-  padding: 1%;
-  margin: 1%;
-  background-color: lightcoral;
-  background-image:"../src/img/tresor.png";
-  background-size: auto;
-}
-.frontend {
-  flex: 1;
-  padding: 1%;
-  margin: 1%;
-  background-color: bisque;
-}
-.git {
-  flex: 1;
-  padding: 1%;
-  margin: 1%;
-  background-color: lightyellow;
+  align-items: start;
 }
 h6 {
-  flex: 1;
+  background: none;
+  color: var(--color-global);
   margin: 1%;
+}
+hr {
+  background-color:var(--background-color-global);
+  color: var(--color-global);
+}
+a {
+  background-color:var(--background-color-global);
+  color: var(--color-global);
+}
+a:hover{
+  font-size:1.2rem;
+}
+.body {
+  background-color:var(--background-color-global);
+  display: block;
+  justify-content: center;
+  padding-bottom: 25%;
+}
+.container {
+  background:none;
+  display: inline-block;
+  justify-content:center;
+}
+#index{
+  background-image: url('../img/afh.png');
+  background-repeat: no-repeat;
+  background-size: 100vw 70vh;
+  background-position: -30px 0;
+}
+#about{
+  display: flex;
+}
+#contact{
+  background-image: url('../img/batterfly.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+ul {
+  background: none;
+  list-style-type: none;
+  overflow: hidden;
+  justify-items: right;
+}
+li {
+  background: none;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+#personal {
+  justify-content: center;
+}
+table tr td {
+  vertical-align: top;
+  background: none;
+  color: var(--color-global);
+}
+#foto {
+  width: 50%;
+  opacity: 70%;
+}
+
+.project{
+  background-position-y: bottom;
+  align-content:space-between;
+}
+#arduino {
+  flex: 1;
+  padding: 1%;
+  margin: 1%;
+  background-image: url('../src/img/tresor.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#frontend {
+  flex: 1;
+  padding: 1%;
+  margin: 1%;
+  background-image: url('../img/efh.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#git {
+  flex: 1;
+  padding: 1%;
+  margin: 1%;
+  background-image: url('../img/monkey.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+form {
+  width: 100%;
+  padding: 10%;
+  display: block;
+  align-content: center;
+  justify-content: space-between;
+}
+input {
+  flex: 1;
+  background-color: var(--background-color-input);
+  color:var(--color-input);
+  text-decoration: double;
+  align-self: flex-end;
+  margin-bottom: 1%;
+  margin-right: 1%;
+}
+select {
+  color: var(--color-input);
+  background-color:var(--background-color-input);
+}
+textarea{
+  color:var(--color-input);
+  background-color: var(--background-color-input);
+}
+#submit{
+  background-color: var(--background-color-button);
+  color: var(--color-button);
+  text-decoration:double;
+  margin: 1%;
+  border-radius: 10%;
+}
+#reset{
+  background-color:var(--background-color-button);
+  color: var(--color-button);
+  text-decoration:double;
+  margin: 1%;
+  border-radius: 10%;
+}
+button {
+    background-color: var(--background-color-button);
+    color: var(--color-button);
+    text-decoration:double;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: 1%;
+
+  }
+  button:hover {
+    border: solid;
+    border:var(--color-button) ;
+    border:10px;
+}
+.output{
+  color: var(--color-global);
+  background-color: var(--background-color-global);
+}
+#pp{
+  display:contents ;
+  width:100%;
+  display: inline-flex;
+  opacity: 50%;
 }
 
 
