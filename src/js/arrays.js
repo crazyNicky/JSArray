@@ -58,7 +58,7 @@ function displayArray(temp,flag) {
         "<button onClick =\"removeFromArray("+(flag?"userArray":"myArray")+","+
         temp.indexOf(item)+","+flag+")\">POP Me</button></li>"
     }); 
-    checkout.innerHTML = (temp.length)?"<button onClick=\"checkOut("+(flag?"userArray":"myArray")+","+flag+")\">Win Me</button>" :"";
+    checkout.innerHTML = (temp.length)?"<button onClick=\"checkOut("+(flag?"userArray":"myArray")+","+flag+")\">Buy Me</button>" :"";
     if(!temp.length)output.innerHTML =
       "<img id=\"pp\" src=\"../src/img/pp.png\" href=\"https://www.paypal.com/de/signin\" alt=\"Hier könnte Ihre Werbung stehen\"><b><i><h3>Hier könnte IHRE Werbung stehen...</h3></i></b>";
 }

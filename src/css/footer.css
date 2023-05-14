@@ -47,6 +47,7 @@
   #dl{
     background-image: url(../img/dl.jpg);
     background-size: 140%;
+    cursor: pointer;
   }
   #baa {
     background-image: url('../img/baa.png');
@@ -69,6 +70,10 @@
   background-size: 160%;
 }
 #bvb {
-  background-image: url('../img/bvb.webp');;
+  background-image: url('../img/bvb.webp');
   background-size: 180%;
+}
+#s04 {
+  background-image: url('../img/schalke.png');
+  background-size: 160%;
 }

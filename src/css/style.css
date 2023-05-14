@@ -2,11 +2,9 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
-  /* background-size: 100% 100%; */
 }
 body {
   background-color:var(--background-color-global);
-  /* padding: 1%; */
   align-content: center;
   margin: 1%;
   margin-bottom: none;
@@ -77,37 +75,38 @@ a:hover{
 #index{
   background-image: url('../img/afh.png');
   background-repeat: no-repeat;
-  background-size: 100vw 70vh;
-  background-position: -30px 0;
-  padding-bottom: 31%;
+  background-size: 100vw 67vh;
+  background-position: -20px 0;
+  padding-bottom: 44%;
 }
 #arrays{
   padding-bottom: 25%;
 }
 #projects {
  display: flex;
- padding-bottom: 14%;
+ padding-bottom: 15%;
 }
 
 #about{
   display: flex;
   padding-left: 25%;
   padding-right: 5%;
-  padding-bottom: 0;
+  padding-bottom: 9%;
   padding-top: 0;
 }
 #contact{
   background-image: url('../img/batterfly.jpg');
   background-repeat: no-repeat;
-  background-size: 100vw 40vw;
-  padding-bottom: 0%;
+  background-size: 100vw 82%;
+  padding-bottom: 5%;
+  margin-bottom: -155px;
 }
 fieldset{
   width:fit-content;
-  padding-left: 2%;
   margin-top: -100px;
   margin-left: auto;
-  margin-right:15%;
+  margin-right:20%;
+  justify-content: center;
 }
 ul {
   background: none;
@@ -117,6 +116,7 @@ ul {
 }
 li {
   background: none;
+  color: var(--color-global);
   width: 100%;
   display:flex;
   justify-content: space-between;
@@ -160,6 +160,7 @@ form {
   align-content: center;
   justify-content: space-between;
 }
+
 input {
   background-color: var(--background-color-input);
   color:var(--color-input);
@@ -180,15 +181,15 @@ textarea{
   background-color: var(--background-color-button);
   color: var(--color-button);
   text-decoration:double;
-  margin: 1%;
   border-radius: 10%;
+  cursor: pointer;
 }
 #reset{
   background-color:var(--background-color-button);
   color: var(--color-button);
   text-decoration:double;
-  margin: 1%;
   border-radius: 10%;
+  cursor: pointer;
 }
 button {
     background-color: var(--background-color-button);
@@ -203,6 +204,7 @@ button {
     border: solid;
     border:var(--color-button) ;
     border:10px;
+    cursor: pointer;
 }
 .output{
   color: var(--color-global);
@@ -214,6 +216,7 @@ button {
   margin-left: 10%;
   display: inline-flex;
   opacity: 50%;
+  margin-bottom: -15vh;
 }
 
 

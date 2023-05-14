@@ -15,16 +15,17 @@
     <div class="body" id="contact">
         <form id="myForm">
             <fieldset>
-                <legend id="legend">Ihre Meinung</legend>
+                <legend id="legend">Ihre Meinung ist uns wichtig! Danke</legend>
                 <br>
                 <p id="anrede">
-                    <input type="radio" name="anrede" id="ohne" value="" checked>
+                    <input type="radio" name="anrede" value="" checked>
                     <label for="ohne">ohne Anrede</label>
-                    <input type="radio" name="anrede" id="herr" value="Herr">
+                    <input type="radio" name="anrede" value="Herr">
                     <label for="herr">Herr</label>
-                    <input type="radio" name="anrede" id="frau" value="Frau">
+                    <input type="radio" name="anrede" value="Frau">
                     <label for="frau">Frau</label>
-                    <br>
+                </p>
+                <p>
                     <label for="firstname">Vorname</label>
                     <br>
                     <input type="text" id="firstname" name="firstname" placeholder="Vorname" required />
@@ -54,8 +55,8 @@
                     <label for="nachricht">Nachricht:</label><br>
                     <textarea id=nachricht name="nachricht" placeholder="Ihre Nachricht hier eingeben..."></textarea>
                 <p>
-                    <button id="btnSubmit">Absenden</button>
-                    <input id="reset" type="reset" value="Zurücksetzen">
+                    <input type="submit" id="submit" value="Absenden">
+                    <input type="reset" id="reset" value="Zurücksetzen">
                 </p>
             </fieldset>
         </form>

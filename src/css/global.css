@@ -1,4 +1,4 @@
-:root{
+:root {
   --color-global:rgb(206, 218, 100);
   --background-color-global:rgb(43, 39, 39);
   --color-input:rgb(0, 0, 0);
@@ -8,4 +8,6 @@
   --background-color-switch:rgb(97,97,97);
     --color-button:rgb(0, 0, 0);
     --background-color-button:rgb(204, 204, 204);
+  --id-show:bvb;
+  --id-hide:s04;
 }

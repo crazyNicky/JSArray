@@ -7,7 +7,6 @@ function invertColor(rgbColor) {
     rgbColor = rgbColor.slice(4, -1);
     // Schritt 2: Zerlegen der RGB-Komponenten in separate Variablen
     let rgbArray = rgbColor.split(',');
-    console.log(rgbArray);
     let red = parseInt(rgbArray[0]);
     let green = parseInt(rgbArray[1]);
     let blue = parseInt(rgbArray[2]);
@@ -28,6 +27,14 @@ function darkLight(){
     let colorH = invertColor(window.getComputedStyle(rootElement).getPropertyValue("--color-hover"));
     let colorH_BG = invertColor(window.getComputedStyle(rootElement).getPropertyValue("--background-color-hover"));
     let colorS = invertColor(window.getComputedStyle(rootElement).getPropertyValue("--background-color-switch"));
+    
+    let idTemp = window.getComputedStyle(rootElement).getPropertyValue("--id-show");
+    let iTemp = document.querySelector("#"+idTemp);
+    rootElement.style.setProperty("--id-show", window.getComputedStyle(rootElement).getPropertyValue("--id-hide"));
+    rootElement.style.setProperty("--id-hide", idTemp);
+    console.log(window.getComputedStyle(rootElement).getPropertyValue("--id-show"));
+    iTemp.setAttribute("id", window.getComputedStyle(rootElement).getPropertyValue("--id-show")); 
+    
     rootElement.style.setProperty("--color-global", colorG);
     rootElement.style.setProperty("--background-color-global", colorG_BG);
     rootElement.style.setProperty("--color-input", colorI);
