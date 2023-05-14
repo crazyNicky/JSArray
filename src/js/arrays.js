@@ -2,17 +2,21 @@ const url = 'http://localhost:3003';
 let myArray = [];
 let serviceArray =[];
 let userArray = [];
-function switchSource(){
-  try {return (document.getElementById("switch").checked) ? "fakenames.json" : "my.json"} 
-  catch (error) {return "my.json"}
+function switchSource(flag){
+  if(flag)return "my.json";
+  try {
+    return (window.getComputedStyle(document.querySelector(":root")).getPropertyValue("--id-show")=="s04") ? "fakenames.json" : "my.json"} 
+  catch (error) {
+    return "my.json"}
 }
-const request = new Request(url, {
+function getFromServer(flag){
+  const request = new Request(url, {
   method: "GET",
   headers: {
-    "x-filename": switchSource()
+    "x-filename": switchSource(flag)
   }
-});
-fetch(request)
+  });
+  fetch(request)
   .then(response => {
     if (!response.ok) {
       throw new Error('Error by GET-Request');
@@ -22,25 +26,25 @@ fetch(request)
   .then(data => {
     serviceArray = data;
     myArray = serviceArray.slice();
-    buildSelect();
+    if(flag)buildSelect();
   })
   .catch(error => {
     window.alert(error)
   });
+}
 function buildSelect(){
   let selectField = document.getElementById("choice");
   try {
     selectField.innerHTML = "<option disabled selected value = \"\">Choose me...</option>";
     serviceArray.forEach(item => selectField.innerHTML += "<option value=\""+item+"\">"+item+"</option>")
-  }
-  catch(error){
-    displayArray(myArray,false)
-  }
+  }catch(error){}
 }
 function addToArray(temp,flag) {  //0 for input, 1 for select
   let inputField = document.getElementById(flag?"choice":"input");
   if (inputField.value!="")
     temp.push(inputField.value);
+  else
+    getFromServer(false);  
   inputField.flag? selectedIndex = 0 : inputField.value = ""; 
   displayArray(temp,flag)
 }
@@ -52,14 +56,14 @@ function displayArray(temp,flag) {
   const output = document.getElementById(flag?"selected":"inputed");
   const checkout = document.getElementById("checkout");
   output.innerHTML = "";
-  temp.sort((a,b)=>b.localeCompare(a));
+  temp.sort((a,b)=>a.localeCompare(b));
   temp.forEach(item =>{ 
     output.innerHTML += "<li>"+item+
         "<button onClick =\"removeFromArray("+(flag?"userArray":"myArray")+","+
         temp.indexOf(item)+","+flag+")\">POP Me</button></li>"
     }); 
     checkout.innerHTML = (temp.length)?"<button onClick=\"checkOut("+(flag?"userArray":"myArray")+","+flag+")\">Buy Me</button>" :"";
-    if(!temp.length)output.innerHTML =
+    if(!(temp.length||flag))output.innerHTML =
       "<img id=\"pp\" src=\"../src/img/pp.png\" href=\"https://www.paypal.com/de/signin\" alt=\"Hier könnte Ihre Werbung stehen\"><b><i><h3>Hier könnte IHRE Werbung stehen...</h3></i></b>";
 }
 function checkOut(temp,flag){
@@ -79,3 +83,4 @@ function checkOut(temp,flag){
       window.alert(error)
     });
 }
+getFromServer(true);

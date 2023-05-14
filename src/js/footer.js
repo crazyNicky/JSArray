@@ -32,7 +32,7 @@ function darkLight(){
     let iTemp = document.querySelector("#"+idTemp);
     rootElement.style.setProperty("--id-show", window.getComputedStyle(rootElement).getPropertyValue("--id-hide"));
     rootElement.style.setProperty("--id-hide", idTemp);
-    console.log(window.getComputedStyle(rootElement).getPropertyValue("--id-show"));
+    document.getElementById("team").setAttribute("href",!(idTemp=="bvb")?"https://www.bvb.de/":"https://schalke04.de/")
     iTemp.setAttribute("id", window.getComputedStyle(rootElement).getPropertyValue("--id-show")); 
     
     rootElement.style.setProperty("--color-global", colorG);
