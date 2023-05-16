@@ -1,30 +1,15 @@
-document.getElementById("myForm").addEventListener("submit", handleForm);
-
-function handleForm(event) {
+document.getElementById("myForm").addEventListener("submit", (event)=> {
   event.preventDefault();
-
   let myForm = event.target;
   let formData = new FormData(myForm);
-
-  for (let key of formData.keys()) {
-    console.log(key, formData.get(key));
-  }
-  let url = "http://localhost:3003";
-  let request = new Request(url, {
-    headers:{
-        "x-filename": "input.json"
-    },
+  let request = new Request("http://localhost:3003", {
     body: formData,
     method: "POST",
   });
   fetch(request)
-    .then((response) => response.json())
-    .then((data) => {
-        document.getElementById("legend").innerHTML = data;
-        window.console.warn(data);
-        myForm.reset();
+    .then((response) => {
+      myForm.dispatchEvent(new Event("reset", { bubbles: true, cancelable: true }));
+      window.alert(response);
     })
-    .catch((error) => {
-      console.warn(error);
-    });
-}
+    .catch((error) => window.alert(error));
+});

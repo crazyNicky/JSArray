@@ -50,11 +50,7 @@ h6 {
   color: var(--color-global);
   margin: 1%;
 }
-hr {
-  background-color:var(--background-color-global);
-  color: var(--color-global);
-}
-a {
+a, hr {
   background-color:var(--background-color-global);
   color: var(--color-global);
 }
